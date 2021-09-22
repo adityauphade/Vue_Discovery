@@ -1,7 +1,7 @@
 <template>
   <Header/>
-  <div class="about">
-    <h1>This is the about page</h1>
+  <div class="world-content">
+    <h1>This is the world page</h1>
   </div>
 </template>
 
@@ -16,7 +16,3 @@ import Header from '@/components/Header.vue'    //IMPORTING COMPONENTS
 })
 export default class About extends Vue {}
 </script>
-
-<style lang="sass" scoped>
-
-</style>
