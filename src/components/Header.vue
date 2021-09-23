@@ -6,7 +6,7 @@
     <div class="rightHeader">
       <router-link to="/about">About DLC</router-link>
       <router-link to="/world">Our World</router-link>
-      <router-link to="/experience">Experience</router-link>
+      <router-link to="/experience">Experiences</router-link>
       <router-link to="/gallery">Gallery</router-link>
       <router-link to="/press">Press</router-link>
       <router-link to="/menu"><img src="../assets/menu-logo.jpg" alt="Menu"></router-link>
@@ -61,7 +61,8 @@ export default class Header extends Vue {}
   a{
     text-decoration: none;
     color: #FFF;
-    padding: 10px;
+    margin-left: 60px;
+    font-weight: 600;
   }
   img{
     width: 30px;

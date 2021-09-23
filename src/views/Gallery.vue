@@ -1,85 +1,116 @@
 <template>
-  <div class="gallery-header">
+  <div :style="{
+    background: require ('/src/assets/Galleryheader.jpg')
+  }" class="gallery-header">
     <Header/>
     <div class="title">Gallery</div>
   </div>
   <div class="gallery-content">
-        <div class="grid-images">
-            <div class= "img1">
-            <img src="https://picsum.photos/400/200" alt="">
-            <a href="#">Picture</a>
-            </div>
-            <div class= "img2">
-            <img src="https://picsum.photos/401/200" alt="">
-            <a href="#">Picture</a>
-            </div>
-            <div class= "img3">
-            <img src="https://picsum.photos/402/200" alt="">
-            <a href="#">Picture</a>
-            </div>
-            <div class= "img4">
-            <img src="https://picsum.photos/399/200" alt="">
-            <a href="#">Picture</a>
-            </div>
-            <div class= "img5">
-            <img src="https://picsum.photos/403/200" alt="">
-            <a href="#">Picture</a>
-            </div>
-            <div class= "img6">
-            <img src="https://picsum.photos/398/200" alt="">
-            <a href="#">Picture</a>
-            </div>
-        </div>
+    <div class="grid-images">
+      <div v-for="(image, id) in imageArray" :key="id" class= "img">
+        <img :src="image.src" :alt="id">
+        <a href="#">{{image.author}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="gallery-footer">
+      <Footer/>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import Header from '@/components/Header.vue'    //IMPORTING COMPONENTS
+import Footer from '@/components/Footer.vue'
 
 @Options({
   components: {     //REGISTER COMPONENTS HERE
-    Header
+    Header,
+    Footer
   }
 })
-export default class About extends Vue {}
+export default class Gallery extends Vue {
+  protected imageArray:{
+    src: string,
+    author: string,
+  }[] = [
+    {
+      src: require ('@/assets/outdoor-pursuits.jpg'),
+      author: 'Outdoor Pursuits',
+    },
+    {
+      src: require ('@/assets/golf.jpg'),
+      author: 'Golf',
+    },
+    {
+      src: require ('@/assets/lifestyle.jpeg'),
+      author: 'Lifestyle',
+    },
+    {
+      src: require ('@/assets/landscapes.jpg'),
+      author: 'Landscapes',
+    },
+    {
+      src: require ('@/assets/clubhouses.jpg'),
+      author: 'Clubhouses',
+    },
+    {
+      src: require ('@/assets/wellness.jpg'),
+      author: 'Wellness',
+    },
+  ]
+}
 </script>
 
 <style lang="scss" scoped>
+$image-margin-bottom: 5em;
 *{
-    width: 100%;
-    .title{
-        font-size: 80px;
-        color: #FFF;
-        z-index: 1;
-        font-family: 'Gideon Roman', cursive;
-        text-align: center;
-    }
-    .grid-images{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 5em;
-        // grid-gap: 5em 0em;
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            a{
-                padding-top: 35px;
-                font-size: 25px;
-                font-family: 'Gideon Roman', cursive;
-                text-decoration: none;
-                text-align: center;
-                color: #FFF;
-            }
-        }
-    }
+  .title{
+      font-size: 80px;
+      color: #FFF;
+      z-index: 1;
+      font-family: 'messina-sans';
+      text-align: center;
+      width: 70vw;
+      display: flex;
+      margin: auto;
+      height: 60vh;
+      align-items: center;
+  }
+  .grid-images{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: $image-margin-bottom;
+      // grid-gap: 5em 0em;
+      div{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          a{
+            padding-top: 35px;
+            font-size: 25px;
+            font-family: 'Gideon Roman', cursive;
+            text-decoration: none;
+            text-align: center;
+            color: #FFF;
+          }
+          img{
+            width: 100%;
+          }
+      }
+  }
 }
 .gallery-header{
-    background-image: url("https://picsum.photos/2000/1000");
+    // background-image: url("@/assets/Galleryheader.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 75vh;
+}
+body{
+  width: 100vw;
+}
+.gallery-footer{
+  margin-top: $image-margin-bottom;
 }
 </style>

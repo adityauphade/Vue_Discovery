@@ -26,13 +26,19 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Serif+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
+  // font-family: 'Roboto', sans-serif;
   // background: #000;
   // width: 100vw;
   // height: 100vh;
 }
 body{
   background:#000;
+}
+.router-link-exact-active {
+  border-bottom: 1px solid #ffffff;
 }
 </style>
