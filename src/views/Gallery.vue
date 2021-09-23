@@ -1,7 +1,5 @@
 <template>
-  <div :style="{
-    background: require ('/src/assets/Galleryheader.jpg')
-  }" class="gallery-header">
+  <div class="gallery-header">
     <Header/>
     <div class="title">Gallery</div>
   </div>
@@ -35,27 +33,27 @@ export default class Gallery extends Vue {
     author: string,
   }[] = [
     {
-      src: require ('@/assets/outdoor-pursuits.jpg'),
+      src: require ('@/assets/Gallery/outdoor-pursuits.jpg'),
       author: 'Outdoor Pursuits',
     },
     {
-      src: require ('@/assets/golf.jpg'),
+      src: require ('@/assets/Gallery/golf.jpg'),
       author: 'Golf',
     },
     {
-      src: require ('@/assets/lifestyle.jpeg'),
+      src: require ('@/assets/Gallery/lifestyle.jpeg'),
       author: 'Lifestyle',
     },
     {
-      src: require ('@/assets/landscapes.jpg'),
+      src: require ('@/assets/Gallery/landscapes.jpg'),
       author: 'Landscapes',
     },
     {
-      src: require ('@/assets/clubhouses.jpg'),
+      src: require ('@/assets/Gallery/clubhouses.jpg'),
       author: 'Clubhouses',
     },
     {
-      src: require ('@/assets/wellness.jpg'),
+      src: require ('@/assets/Gallery/wellness.jpg'),
       author: 'Wellness',
     },
   ]
@@ -102,10 +100,10 @@ $image-margin-bottom: 5em;
   }
 }
 .gallery-header{
-    // background-image: url("@/assets/Galleryheader.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 75vh;
+  background-image: url("../assets/Gallery/Galleryheader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
 }
 body{
   width: 100vw;

@@ -3,8 +3,9 @@
 <div class="world-content">
   <div class="grid-images">
       <div v-for="(image, id) in imageArray" :key="id" class= "img">
-        <img :src="image.src" :alt="id">
-        <a href="#">{{image.author}}</a>
+        <img :src="getImageData(image.src)" :alt="id">
+        <a href="#">{{image.title}}</a>
+        <p>{{image.location}}</p>
       </div>
     </div>
 </div>
@@ -22,35 +23,187 @@ import Footer from '@/components/Footer.vue'    //IMPORTING COMPONENTS
     Footer
   }
 })
-export default class About extends Vue {
+export default class World extends Vue {
   protected imageArray:{
     src: string,
-    author: string,
-  }[] = [
-    {
-      src: require ('@/assets/outdoor-pursuits.jpg'),
-      author: 'Outdoor Pursuits',
+    title: string,
+    location: string
+  }[] = [{
+        src: 'p1.jpg',
+        title: 'NORTH SHORE PRESERVE',
+        location: `Kaua'i, Hawaii`
+    },{
+        src: 'p2.jpg',
+        title: 'JAMES ISLAND',
+        location: `Southern Gulf Islands, British Columbia, Canada`
+    },{
+        src: 'p3.jpg',
+        title: 'COSTATERRA',
+        location: `Comporta, Portugal`
+    },{
+        src: 'p4.jpg',
+        title: 'BARBUDA OCEAN CLUB',
+        location: `Barbuda, West Indies`
+    },{
+        src: 'p5.jpg',
+        title: 'DRIFTWOOD',
+        location: `Austin, Texas`
+    },{
+        src: 'p6.jpg',
+        title: 'TROUBADOUR',
+        location: `Nashville, Tennessee`
+    },{
+        src: 'p7.jpg',
+        title: 'PLAYA GRANDE',
+        location: `Rio San Juan, Dominican Republic`
     },
     {
-      src: require ('@/assets/golf.jpg'),
-      author: 'Golf',
+        src: 'p8.jpg',
+        title: 'CHILENO BAY',
+        location: `Cabo San Lucas, Mexico`
     },
     {
-      src: require ('@/assets/lifestyle.jpeg'),
-      author: 'Lifestyle',
+        src: 'p9.jpg',
+        title: 'THE SUMMIT',
+        location: `Las Vegas, Nevada`
     },
     {
-      src: require ('@/assets/landscapes.jpg'),
-      author: 'Landscapes',
+        src: 'p10.jpg',
+        title: 'DUNE DECK',
+        location: `Westhamton Beach, NY`
+    },{
+        src: 'p11.jpg',
+        title: 'SILO RIDGE',
+        location: `Amenia, New York`
+    },{
+        src: 'p12.jpg',
+        title: 'MAKENA',
+        location: `Maui, Hawaii`
     },
     {
-      src: require ('@/assets/clubhouses.jpg'),
-      author: 'Clubhouses',
+        src: 'p13.jpg',
+        title: 'YELLOWSTONE CLUB',
+        location: `Big Sky, Montana`
     },
     {
-      src: require ('@/assets/wellness.jpg'),
-      author: 'Wellness',
+        src: 'p14.jpg',
+        title: 'GOZZER RANCH',
+        location: `Coeur d'Alene, Idaho`
     },
-  ]
+    {
+        src: 'p15.jpg',
+        title: 'EL DORADO',
+        location: `Los Gabos, Mexico`
+    },
+    {
+        src: 'p16.jpg',
+        title: 'MADISON',
+        location: `La Quinta, California`
+    },
+    {
+        src: 'p17.jpg',
+        title: `BAKER'S BAY`,
+        location: `Great Guana Cay, Behamas`
+    },
+    {
+        src: 'p18.jpg',
+        title: 'HIDEAWAY',
+        location: `La Quinta California`
+    },
+    {
+        src: 'p19.jpg',
+        title: 'MOUNTAINTOP',
+        location: `Cashiers North Carolina`
+    },
+    {
+        src: 'p20.jpeg',
+        title: 'MIRABEL',
+        location: `Scottsdale, Azizona`
+    },
+    {
+        src: 'p21.jpg',
+        title: 'KUKIO',
+        location: `Kohala, Hawaii`
+    },
+    {
+        src: 'p22.jpg',
+        title: 'VAQUERO',
+        location: `Westlake, Texas`
+    },
+    {
+        src: 'p23.jpg',
+        title: 'IRON HORSE',
+        location: `Whitefish, Montana`
+    },
+    {
+        src: 'p24.jpg',
+        title: 'CORDEVALLE',
+        location: `Silicon Valley, California`
+    },
+    {
+        src: 'p25.jpg',
+        title: 'ESTANICIA',
+        location: `Scottsdale, Arizona`
+    }]
+    protected getImageData(src: string): string{
+      return require('@/assets/OurWorlds/' + src)
+    }
 }
 </script>
+
+<style lang="scss" scoped>
+$image-margin-bottom: 5em;
+$image-title-fontSize: 0.85em;
+*{
+  .title{
+      font-size: 80px;
+      color: #FFF;
+      z-index: 1;
+      text-align: center;
+      width: 70vw;
+      display: flex;
+      margin: auto;
+      height: 60vh;
+      align-items: center;
+  }
+  .grid-images{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      row-gap: 3em;
+      grid-gap: 5em 1em;
+      div{
+          a{
+            // padding-top: 35px;
+            font-size: $image-title-fontSize;
+            // font-family: 'Gideon Roman', cursive;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 1rem;
+            color: #FFF;
+
+          }
+          img{
+            width: 100%;
+          }
+          p{
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 0.25rem;
+          }
+      }
+  }
+}
+.world-header{
+  margin-bottom: 25vh;
+}
+.world-content{
+  padding: 1em;
+}
+body{
+  width: 100vw;
+}
+.world-footer{
+  margin-top: $image-margin-bottom;
+}
+</style>

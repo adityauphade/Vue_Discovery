@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-// import { Options, Vue } from 'vue-class-component';
+import { Options, Vue } from 'vue-class-component';
 // // @ is an alias to /src
 // import Home from '@/views/Home.vue'    //IMPORTING COMPONENTS
 
@@ -20,7 +20,7 @@
 //     Home
 //   },
 // })
-// export default class App extends Vue {}
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
