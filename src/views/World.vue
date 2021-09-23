@@ -206,4 +206,31 @@ body{
 .world-footer{
   margin-top: $image-margin-bottom;
 }
+@media screen and (max-width: 834px) and (min-width: 429px){
+.grid-images{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  div{
+    a{
+      font-size: 0.95em;
+    }
+    p{
+      font-size: 0.9em;
+    }
+  }
+}
+.world-content{
+  padding: 0.8em;
+}
+}
+@media screen and (max-width: 428px) {
+.grid-images{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.world-content{
+  padding: 0.7em;
+}
+}
 </style>

@@ -110,4 +110,30 @@ body{
 .gallery-footer{
   margin-top: $image-margin-bottom;
 }
+.title{
+  font-family: 'Gideon Roman', cursive;
+}
+@media screen and (max-width: 834px) and (min-width: 429px){
+.grid-images{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.title{
+  font-size: 60px;
+}
+}
+@media screen and (max-width: 428px) {
+.grid-images{
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  div{
+    a{
+      font-size: 22px;
+    }
+  }
+}
+.title{
+  font-size: 45px;
+}
+}
 </style>

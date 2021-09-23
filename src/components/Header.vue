@@ -62,7 +62,8 @@ export default class Header extends Vue {}
     color: #FFF;
     margin-left: 60px;
     padding-bottom: 5px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     display: inline-block;
     position: relative;
   }
@@ -87,12 +88,29 @@ export default class Header extends Vue {}
     padding-left: 10px;
   }
 }
-
 .leftHeader{
   img{
     width: 250px;
   };
 }
-
-
+@media screen and (max-width: 834px) and (min-width: 429px){
+.leftHeader{
+  img{
+    width: 225px;
+  }
+}
+.rightHeader{
+  display: none;
+}
+}
+@media screen and (max-width: 428px) {
+.leftHeader{
+  img{
+    width: 175px;
+  }
+}
+.rightHeader{
+  display: none;
+}
+}
 </style>

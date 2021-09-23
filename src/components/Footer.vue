@@ -56,7 +56,6 @@ footer{
     flex-flow: column wrap;
     justify-content: space-between;
     width: 80vw;
-    // padding: 1%;
     padding: 120px 0px 60px 0px;
     margin: auto;
 }
@@ -97,5 +96,36 @@ a {
 color: #ffffff;
 margin-right: 3rem;
 text-decoration: none;
+}
+@media screen and (max-width: 834px) and (min-width: 429px){
+footer{
+    padding: 100px 0px 50px 0px;
+    .footer-content{
+        img{
+            width:50px;
+        }
+        .footer-navigation{
+            font-size: 14px;
+        }
+    }
+}
+}
+@media screen and (max-width: 428px) {
+footer{
+    padding: 75px 0px 37.5px 0px;
+    .footer-content{
+        flex-direction: column;
+        img{
+            width:40px;
+            justify-content: center;
+        }
+        .footer-navigation{
+            font-size: 9px;
+        }
+    }
+    p{
+        font-size: 0.6rem;
+    }
+}
 }
 </style>
