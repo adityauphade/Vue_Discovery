@@ -38,7 +38,4 @@ export default class App extends Vue {}
 body{
   background:#000;
 }
-.router-link-exact-active {
-  border-bottom: 1px solid #ffffff;
-}
 </style>

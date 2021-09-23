@@ -67,7 +67,6 @@ $image-margin-bottom: 5em;
       font-size: 80px;
       color: #FFF;
       z-index: 1;
-      font-family: 'messina-sans';
       text-align: center;
       width: 70vw;
       display: flex;

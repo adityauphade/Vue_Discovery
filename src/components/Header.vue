@@ -57,12 +57,30 @@ export default class Header extends Vue {}
 }
 
 .rightHeader{
-  font-family: 'Roboto', sans-serif;
   a{
     text-decoration: none;
     color: #FFF;
     margin-left: 60px;
+    padding-bottom: 5px;
     font-weight: 600;
+    display: inline-block;
+    position: relative;
+  }
+  a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   img{
     width: 30px;
