@@ -1,3 +1,8 @@
+@mixin left-align-ulContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
 .footer{
     color: white;
     background: #1A1A1A;
@@ -62,16 +67,26 @@ footer{
 }
 }
 @media screen and (max-width: 428px) {
+
 footer{
     padding: 75px 0px 37.5px 0px;
     .footer-content{
         flex-direction: column;
+        
         img{
             width:40px;
             justify-content: center;
+            margin: 0px 0px 0.75rem 0.75rem;
         }
         .footer-navigation{
             font-size: 9px;
+        }
+        ul{
+            padding: 0px;
+            // @include left-align-ulContent;
+            li{
+                padding: 0.75rem;
+            }
         }
     }
     p{
