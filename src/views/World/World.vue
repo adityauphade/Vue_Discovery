@@ -14,8 +14,8 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Header from '@/components/Header.vue'    //IMPORTING COMPONENTS
-import Footer from '@/components/Footer.vue'    //IMPORTING COMPONENTS
+import Header from '@/components/Header/Header.vue'    //IMPORTING COMPONENTS
+import Footer from '@/components/Footer/Footer.vue'    //IMPORTING COMPONENTS
 
 @Options({
   components: {     //REGISTER COMPONENTS HERE
@@ -152,85 +152,5 @@ export default class World extends Vue {
 </script>
 
 <style lang="scss" scoped>
-$image-margin-bottom: 5em;
-$image-title-fontSize: 0.85em;
-*{
-  .title{
-      font-size: 80px;
-      color: #FFF;
-      z-index: 1;
-      text-align: center;
-      width: 70vw;
-      display: flex;
-      margin: auto;
-      height: 60vh;
-      align-items: center;
-  }
-  .grid-images{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      row-gap: 3em;
-      grid-gap: 5em 1em;
-      div{
-          a{
-            // padding-top: 35px;
-            font-size: $image-title-fontSize;
-            // font-family: 'Gideon Roman', cursive;
-            text-decoration: none;
-            text-align: center;
-            margin-top: 1rem;
-            color: #FFF;
-
-          }
-          img{
-            width: 100%;
-          }
-          p{
-            font-size: 0.9rem;
-            color: #777;
-            margin-top: 0.25rem;
-          }
-      }
-  }
-}
-.world-header{
-  margin-bottom: 25vh;
-}
-.world-content{
-  padding: 1em;
-}
-body{
-  width: 100vw;
-}
-.world-footer{
-  margin-top: $image-margin-bottom;
-}
-@media screen and (max-width: 834px) and (min-width: 429px){
-.grid-images{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  div{
-    a{
-      font-size: 0.95em;
-    }
-    p{
-      font-size: 0.9em;
-    }
-  }
-}
-.world-content{
-  padding: 0.8em;
-}
-}
-@media screen and (max-width: 428px) {
-.grid-images{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.world-content{
-  padding: 0.7em;
-}
-}
+@import './World.scss'
 </style>

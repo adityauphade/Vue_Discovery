@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/world',
     name: 'World',
-    component: () => import('../views/World.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/World/World.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/experience',
@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/gallery',
     name: 'Gallery',
-    component: () => import('../views/Gallery.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/Gallery/Gallery.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/press',

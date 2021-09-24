@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Header from '@/components/Header.vue'    //IMPORTING COMPONENTS
+import Header from '@/components/Header/Header.vue'    //IMPORTING COMPONENTS
 
 @Options({
   components: {     //REGISTER COMPONENTS HERE
