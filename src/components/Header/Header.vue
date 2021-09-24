@@ -14,20 +14,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-
-// @Options({   --DEFINING PROPERTIES & COMPONENTS
-//   props: {
-//     content passed from the parent is received & used as prop 
-//     msg: String
-//   },
-//   components{
-//       components are used repetedly  
-//   }
-// })
-export default class Header extends Vue {}
-</script>
+<script type="module" src="./Header.ts"></script>
 
 <!-- Add "scoped" attribute to limit CSS only to Header component -->
 <style scoped lang="scss">

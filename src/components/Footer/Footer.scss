@@ -6,6 +6,7 @@
 .footer{
     color: white;
     background: #1A1A1A;
+    // z-index: 100;
 }
 footer{
     display: flex;
@@ -83,7 +84,6 @@ footer{
         }
         ul{
             padding: 0px;
-            // @include left-align-ulContent;
             li{
                 padding: 0.75rem;
             }
