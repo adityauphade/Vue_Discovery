@@ -5,6 +5,12 @@ flex-direction: row;
 align-items: center;
 }
 
+@mixin vertical-align {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
 .header{
 padding-top: 35px;
 width: 90vw;

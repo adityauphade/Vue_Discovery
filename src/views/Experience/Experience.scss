@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200&display=swap');
+// $page-width: calc(100vw - 17px);     => due to vertival scroll bar's width
+@mixin RoyalFont {
+    font-family: 'Benne', serif;
+}
+@mixin HeaderL2Font {
+    font-family: 'Work Sans', sans-serif;
+}
+@mixin horizontal-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin vertical-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+$page-width: 100%;
+
+.experience-header{
+    // margin-bottom: 25vh;
+    position: absolute;
+    z-index: 100;
+    width: $page-width;
+}
+.experience-bg{
+    width: $page-width;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.experience-footer{
+    width: $page-width;
+}
+
+.container-1{
+    padding: 8.5rem 10rem;
+    @media screen and (max-width: 834px) {
+        padding: 6rem 3rem;
+    }
+    .headerContent{
+        @include RoyalFont;
+        line-height: 1.4;
+        max-width: 59rem;
+        margin-bottom: 8.5rem !important;
+        margin: auto;
+        text-align: center;
+        font-size: calc(21.33333px + 1.13333vw);
+
+        @media screen and (max-width: 834px){
+            margin-bottom: 6rem !important;
+            // font-size: 1.65rem;
+        }
+    }
+    .bodyContent{
+        @include horizontal-align;
+        margin: auto;
+        @media screen and (max-width: 834px) {
+            flex-direction: column-reverse;
+        }
+        .leftBody{
+            color: #777;
+            h1{
+                font-size: calc(21.33333px + 1.13333vw);
+                @include RoyalFont;
+                color: #000;
+            }
+        }
+        .rightBody{
+            @include horizontal-align;
+            justify-content: end;
+            img{
+                width: 80%;
+            }
+            @media screen and (max-width: 834px) {
+                justify-content: center !important;
+                margin-bottom: 6rem !important;
+            }
+        }
+    }
+}
