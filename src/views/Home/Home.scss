@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200&display=swap');$page-width: 100%;
+@mixin HeaderL1Font {
+  font-family: 'Benne', serif;
+}
+@mixin HeaderL2Font {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.home-header{
+  position: absolute;
+  width: $page-width;
+  z-index: 100;
+}
+.home-bg{
+  width: $page-width;
+  height: 100vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.home-content{
+  width: $page-width;
+}
+.home-footer{
+  width: $page-width;
+}
+
+
+
+#welcome {
+  background: url("../../assets/Home/background-right.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 8rem;
+  @media screen and (max-width: 834px) {
+    padding: 4rem 0;
+  }
+
+  display: grid;
+  column-gap: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr;
+  @media screen and (max-width: 834px) {
+    column-gap: 4rem;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .top-left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    @media screen and (max-width: 834px) {
+      row-gap: 2rem;
+      padding: 2rem;
+    }
+
+    .welcome-to-our-world {
+      span {
+        display: block;
+        font-size: 3rem;
+        line-height: 2.5rem;
+        @media screen and (max-width: 429px) {
+          font-size: 2.5rem;
+          line-height: 2rem;
+        }
+      }
+      .welcome-to {
+        @include HeaderL1Font
+      }
+      .our-world{
+        @include HeaderL2Font
+      }
+    }
+
+    .welcome-text {
+      color: #777;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .right {
+    grid-row: span 2;
+    @media screen and (max-width: 834px) {
+      padding: 0 2rem;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .bottom-left {
+    img {
+      width: 100%;
+      margin-top: 8rem;
+      @media screen and (max-width: 429px) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+#LandofDiscovery{
+  padding: 4rem 0rem;
+  background-color: #F3F3F3;
+  .HeaderBlock{
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    max-width: 50rem;
+    @media screen and (max-width: 834px) {
+      max-width: 100vw;
+      padding: 2rem;
+      row-gap: 2rem;
+    }
+    .Header{
+      display: block;
+      font-size: 3rem;
+      line-height: 2.5rem;
+      @media screen and (max-width: 834px) {
+        line-height: 2rem;
+      }
+      // font-size: 3.75rem;
+      // line-height: 0.35;
+      #h1{
+        @include HeaderL1Font
+      }
+      #h2{
+        @include HeaderL2Font
+      }
+    }
+    .textContent{
+      color: #777;
+      line-height: 2rem
+    }
+  }
+  .DynamicImages-c3{
+    display: flex;
+    @media screen and (max-width: 834px){
+      flex-direction: column;
+    }
+  }
+}
