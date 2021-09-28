@@ -265,3 +265,89 @@ $icon-size: 1.6rem;
     }
   }
 }
+
+.ExploreOurWorld{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  // padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+.headerBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 8rem;
+  @media screen and (max-width: 834px) {
+    padding: 4rem 2rem;
+  }
+  @media screen and (max-width: 429px) {
+    flex-direction: column;
+    padding: 2rem 2rem;
+    align-items: baseline;
+  }
+  // display: block;
+  .headerText{
+    @media screen and (max-width: 429px) {
+      margin-bottom: 1rem;
+    }
+  }
+  #h1{
+    @include HeaderL1Font;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    @media screen and (max-width: 429px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  #h2{
+    @include HeaderL2Font;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    @media screen and (max-width: 429px) {
+      font-size: 2.5rem;
+    }
+  }
+  h3, p {
+    font-size: 3rem;
+    font-weight: 50;
+    padding-top: 0;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 1px;
+  }
+  .button-pair button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: #FFF;
+    color: black;
+    box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+    font-size: 2rem;
+    @media screen and (max-width: 429px) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+  .button-pair .first-button {
+    margin-right: 1.5rem;
+  }
+  .button-pair button:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 1s ease;
+  }
+}
+.carousel{
+  padding-bottom: 4rem;
+}

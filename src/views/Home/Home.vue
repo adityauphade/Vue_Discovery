@@ -34,6 +34,19 @@
           <img :src="require('@/assets/Home/Leisure-left.jpg')" alt="Leisure" />
         </div>
       </section>
+      <section id="ExploreOurWorld">
+          <div class="headerBlock">
+            <div class="headerText">
+              <h1 id="h1">Explore</h1>
+              <h1 id="h2">our worlds</h1>
+            </div>
+            <div class="button-pair">
+                <button class="first-button">&#8592;</button>
+                <button>&#8594;</button>
+            </div>
+          </div>
+          <div class="carousel"><Carousel/></div>
+      </section>
       <section id="LandofDiscovery">
         <div class="HeaderBlock">
           <div class="Header">
