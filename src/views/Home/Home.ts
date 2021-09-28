@@ -6,7 +6,7 @@ import Footer from '@/components/Footer/Footer.vue'    //IMPORTING COMPONENTS
 @Options({
   components: {     //REGISTER COMPONENTS HERE
     Header,
-    Footer
+    Footer, 
   },
 })
 export default class Home extends Vue {}

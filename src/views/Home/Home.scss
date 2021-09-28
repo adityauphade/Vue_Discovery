@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200&display=swap');
 $page-width: 100%;
+$interBBSpace: 4.5rem;
+$icon-size: 1.6rem;
 @mixin HeaderL1Font {
   font-family: 'Benne', serif;
 }
@@ -151,6 +153,115 @@ $page-width: 100%;
     display: flex;
     @media screen and (max-width: 834px){
       flex-direction: column;
+    }
+  }
+}
+
+.GoogleEarth{
+  position: relative;
+  display: flex;
+  #backgroundImg{
+    z-index: 2;
+  }
+  @media screen and (max-width: 834px){
+    flex-direction: column;
+  }
+  .blackBox{
+    // width: 40vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    left: 50%;
+    padding: 2rem;
+    background-color: #161f1e;
+    color: #FFF;
+    z-index: 10;
+    @media screen and (max-width: 834px){
+      position: static;
+      padding: 1rem;
+      padding-bottom: 2rem;
+      padding-right: 0px;
+    }
+    .textContent{
+      padding: 2rem;
+      line-height: 2;
+      padding-right: 4rem;
+      @media screen and (max-width: 429px) {
+        padding: 0px;
+      }
+      p{
+        color: hsla(0,0%,100%,.5);
+        font-weight: 600;
+        font-size: 0.85rem;
+        @media screen and (max-width: 429px) {
+          font-size: 0.7rem;
+        }
+      }
+      .buttons{
+        display: flex;
+        margin-bottom: $interBBSpace;
+        button{
+          width: 3rem;
+          margin-right: 1rem;
+          border: none;
+          background-color: inherit;
+          outline: none;
+          @media screen and (max-width: 429px) {
+            width: 2.75rem;
+          }
+        }
+      }
+      .icons{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 3.5rem;
+        div{
+          margin-right: 4rem;
+          text-align: center;
+          @media screen and (max-width: 429px) {
+            margin-right: 2rem;
+          }
+          svg{
+            width: $icon-size;
+          }
+        }
+      }
+      .locationName{
+        margin-bottom: $interBBSpace;
+        h1{
+          @include HeaderL1Font;
+          margin-top: 2rem;
+        }
+      }
+      .locationPin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+          width: $icon-size;
+        }
+        p{
+          margin: auto;
+        }
+      }
+    }
+    #overlayImage{
+      position: relative;
+      width: 20vw;
+      top: -100px;
+      z-index: 100;
+      // left: 50%;
+      @media screen and (max-width: 834px) {
+        width: 50vw;
+        top: -150px;
+        height: 50%;
+      }
+      @media screen and (max-width: 429px) {
+        position: absolute;
+        right: 0px;
+        top: 9rem;
+      }
     }
   }
 }

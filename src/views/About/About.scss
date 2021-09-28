@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200&display=swap');
-// $page-width: calc(100vw - 17px);     => due to vertival scroll bar's width
 @mixin RoyalFont {
     font-family: 'Benne', serif;
 }
@@ -17,26 +15,47 @@
     flex-direction: column;
     align-items: center;
 }
+@mixin image-container{
+    padding: 8.5rem 4rem;
+    padding-top: 0 !important;
+    @media screen and (max-width: 834px) and (min-width: 430px){
+        padding: 6rem 2rem;
+    }
+    @media screen and (max-width: 429px){
+        padding: 3rem 1rem;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-fit: cover;
+        background-color: #f3f3f3;
+    }
+}
 $page-width: 100%;
 
-.experience-header{
-    // margin-bottom: 25vh;
-    position: absolute;
-    z-index: 100;
-    width: $page-width;
-}
-.experience-bg{
-    width: $page-width;
+
+.about-header{
+    background-image: url('../../assets/About/IntroBackground.jpg');
+    background-repeat: no-repeat;
+    // background-size: cover;
     height: 100vh;
-    object-fit: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-.experience-footer{
-    width: $page-width;
+    h1{
+        font-size: 4.25rem;
+        color: #FFF;
+        // line-height: 0.75;
+        margin-left: 13.5rem;
+        position: absolute;
+        @media screen and (max-width: 834px) {
+            display: none;
+        }
+    }
+    #head1{
+        font-family: 'Benne', serif;
+    }
+    #head2{
+        font-family: 'Work Sans', sans-serif;
+    }
 }
 
 .container-1{
@@ -99,4 +118,8 @@ $page-width: 100%;
             }
         }
     }
+}
+
+.container-2{
+    @include image-container
 }
