@@ -80,7 +80,7 @@
         </div>
         <img id="sideImage" src="https://dxaurk9yhilm4.cloudfront.net/images/155/What_we_do_builders_2_2ab4534b0a2984e07d7caeca8808129f.jpg" alt="">
       </div>
-      
+      <ImageFooter/>
     </div>
     <Footer/>
   </div>
@@ -91,12 +91,14 @@ import { Options, Vue } from 'vue-class-component';
 import Header from '@/components/Header/Header.vue'    //IMPORTING COMPONENTS
 import Footer from '@/components/Footer/Footer.vue'
 import Carousel from '@/components/Carousel/Carousel-About.vue'
+import ImageFooter from '@/components/ImageFooter/ImageFooter.vue'
 
 @Options({
   components: {     //REGISTER COMPONENTS HERE
     Header,
     Footer,
-    Carousel
+    Carousel,
+    ImageFooter
   }
 })
 export default class About extends Vue {}
