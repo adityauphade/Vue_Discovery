@@ -115,7 +115,7 @@ $icon-size: 1.6rem;
 }
 
 #LandofDiscovery{
-  padding: 4rem 0rem;
+  padding-top: 4rem;
   background-color: #F3F3F3;
   .HeaderBlock{
     padding: 4rem 8rem;
@@ -123,6 +123,7 @@ $icon-size: 1.6rem;
     flex-direction: column;
     row-gap: 3rem;
     max-width: 50rem;
+    line-height: 2.5rem;
     @media screen and (max-width: 834px) {
       max-width: 100vw;
       padding: 2rem;
@@ -131,22 +132,31 @@ $icon-size: 1.6rem;
     .Header{
       display: block;
       font-size: 3rem;
-      line-height: 2.5rem;
       @media screen and (max-width: 834px) {
         line-height: 2rem;
       }
-      // font-size: 3.75rem;
+      @media screen and (max-width: 429px){
+        font-size: 2.5rem;
+      }
       // line-height: 0.35;
       #h1{
-        @include HeaderL1Font
+        @include HeaderL1Font;
+        // line-height: 2.5rem;
+
       }
       #h2{
-        @include HeaderL2Font
+        @include HeaderL2Font;
+        // line-height: 2.5rem;
+
       }
     }
     .textContent{
       color: #777;
-      line-height: 2rem
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
     }
   }
   .DynamicImages-c3{
@@ -155,199 +165,269 @@ $icon-size: 1.6rem;
       flex-direction: column;
     }
   }
-}
-
-.GoogleEarth{
-  position: relative;
-  display: flex;
-  #backgroundImg{
-    z-index: 2;
-  }
-  @media screen and (max-width: 834px){
-    flex-direction: column;
-  }
-  .blackBox{
-    // width: 40vw;
-    position: absolute;
-    top: 0;
+  .GoogleEarth{
+    position: relative;
     display: flex;
-    left: 50%;
-    padding: 2rem;
-    background-color: #161f1e;
-    color: #FFF;
-    z-index: 10;
-    @media screen and (max-width: 834px){
-      position: static;
-      padding: 1rem;
-      padding-bottom: 2rem;
-      padding-right: 0px;
+    #backgroundImg{
+      z-index: 2;
     }
-    .textContent{
+    @media screen and (max-width: 834px){
+      flex-direction: column;
+    }
+    .blackBox{
+      // width: 40vw;
+      position: absolute;
+      top: 0;
+      display: flex;
+      left: 50%;
       padding: 2rem;
-      line-height: 2;
-      padding-right: 4rem;
-      @media screen and (max-width: 429px) {
-        padding: 0px;
+      background-color: #161f1e;
+      color: #FFF;
+      z-index: 10;
+      @media screen and (max-width: 834px){
+        position: static;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        padding-right: 0px;
       }
-      p{
-        color: hsla(0,0%,100%,.5);
-        font-weight: 600;
-        font-size: 0.85rem;
+      .textContent{
+        padding: 2rem;
+        line-height: 2;
+        padding-right: 4rem;
         @media screen and (max-width: 429px) {
-          font-size: 0.7rem;
+          padding: 0px;
         }
-      }
-      .buttons{
-        display: flex;
-        margin-bottom: $interBBSpace;
-        button{
-          width: 3rem;
-          margin-right: 1rem;
-          border: none;
-          background-color: inherit;
-          outline: none;
+        p{
+          color: hsla(0,0%,100%,.5);
+          font-weight: 600;
+          font-size: 0.85rem;
           @media screen and (max-width: 429px) {
-            width: 2.75rem;
+            font-size: 0.7rem;
           }
         }
-      }
-      .icons{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 3.5rem;
-        div{
-          margin-right: 4rem;
-          text-align: center;
-          @media screen and (max-width: 429px) {
-            margin-right: 2rem;
+        .buttons{
+          display: flex;
+          margin-bottom: $interBBSpace;
+          button{
+            width: 3rem;
+            margin-right: 1rem;
+            border: none;
+            background-color: inherit;
+            outline: none;
+            @media screen and (max-width: 429px) {
+              width: 2.75rem;
+            }
           }
+        }
+        .icons{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 3.5rem;
+          div{
+            margin-right: 4rem;
+            text-align: center;
+            @media screen and (max-width: 429px) {
+              margin-right: 2rem;
+            }
+            svg{
+              width: $icon-size;
+            }
+          }
+        }
+        .locationName{
+          margin-bottom: $interBBSpace;
+          h1{
+            @include HeaderL1Font;
+            margin-top: 2rem;
+          }
+        }
+        .locationPin{
+          display: flex;
+          justify-content: center;
+          align-items: center;
           svg{
             width: $icon-size;
           }
+          p{
+            margin: auto;
+          }
         }
       }
-      .locationName{
-        margin-bottom: $interBBSpace;
-        h1{
-          @include HeaderL1Font;
-          margin-top: 2rem;
+      #overlayImage{
+        position: relative;
+        width: 20vw;
+        top: -100px;
+        z-index: 100;
+        // left: 50%;
+        @media screen and (max-width: 834px) {
+          width: 50vw;
+          top: -150px;
+          height: 50%;
         }
-      }
-      .locationPin{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        svg{
-          width: $icon-size;
+        @media screen and (max-width: 429px) {
+          position: absolute;
+          right: 0px;
+          top: 9rem;
         }
-        p{
-          margin: auto;
-        }
-      }
-    }
-    #overlayImage{
-      position: relative;
-      width: 20vw;
-      top: -100px;
-      z-index: 100;
-      // left: 50%;
-      @media screen and (max-width: 834px) {
-        width: 50vw;
-        top: -150px;
-        height: 50%;
-      }
-      @media screen and (max-width: 429px) {
-        position: absolute;
-        right: 0px;
-        top: 9rem;
       }
     }
   }
 }
 
-.ExploreOurWorld{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100vw;
-  height: 100vh;
-  color: black;
-  // padding-top: 8rem;
-  padding-bottom: 4rem;
+
+
+#ExploreOurWorld{
+  .headerBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 8rem;
+    @media screen and (max-width: 834px) {
+      padding: 4rem 2rem;
+    }
+    @media screen and (max-width: 429px) {
+      flex-direction: column;
+      padding: 2rem 2rem;
+      align-items: baseline;
+      
+    }
+    // display: block;
+    .headerText{
+      @media screen and (max-width: 429px) {
+        margin-bottom: 1rem;
+      }
+    }
+    #h1{
+      @include HeaderL1Font;
+      font-size: 3rem;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+      }
+    }
+    
+    #h2{
+      @include HeaderL2Font;
+      font-size: 3rem;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+      }
+    }
+    h3, p {
+      font-size: 3rem;
+      font-weight: 50;
+      padding-top: 0;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    .button-pair button {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      background-color: #FFF;
+      color: black;
+      box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+      font-size: 2rem;
+      @media screen and (max-width: 429px) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+    .button-pair .first-button {
+      margin-right: 1.5rem;
+    }
+    .button-pair button:hover {
+      background-color: black;
+      color: white;
+      transition: background-color 1s ease;
+    }
+  }
+  .carousel{
+    padding-bottom: 4rem;
+  }
 }
-.headerBlock {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4rem 8rem;
+
+#HomeFooter{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
   @media screen and (max-width: 834px) {
-    padding: 4rem 2rem;
+    height: 50vh;
   }
   @media screen and (max-width: 429px) {
-    flex-direction: column;
-    padding: 2rem 2rem;
-    align-items: baseline;
+    grid-template-columns: 1fr;
+    height: 95vh;
   }
-  // display: block;
-  .headerText{
-    @media screen and (max-width: 429px) {
-      margin-bottom: 1rem;
-    }
+  a{
+    text-decoration: none;
+    color: #FFF;
   }
-  #h1{
-    @include HeaderL1Font;
-    font-size: 3rem;
-    line-height: 2.5rem;
-    @media screen and (max-width: 429px) {
-      font-size: 2.5rem;
-    }
+  .home-footer-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-color: #000000;
+      background-blend-mode: normal;
+      .overlay{
+        height: 100%;
+        width: 100%;
+        background: rgba($color: #000000, $alpha: 0.35);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
   }
+  .home-footer-image1{
+      background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/728/Expereinces_slider_190716_095517_e36797c82dbcb9dea0800f713424f022.jpg');
+  }
+  .home-footer-image2{
+      background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/729/lifestyle_slider_190716_095537_fc98236fcd7afd38ca0fd181cf61bcb6.jpg');
+  }
+  .home-footer-image3{
+      background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/730/wellness_slider_190716_095551_90f8ce634cc6ad7a15d605007f03ee5c.jpg');
+  }
+  h4{
+      font-size: 44px;
+      line-height: 1.4;
+      @include HeaderL2Font;
+      font-weight: 300;
+      margin: 0;
+      @media screen and (max-width: 834px) {
+        font-size: 32px;
+      }
+  }
+  button{
+      margin-top: 1.5rem;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: 1px solid #ffffff;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 1.5rem;
+      @media screen and (max-width: 834px) {
+        height: 3rem;
+        width: 3rem;
+      }
+  }
+}
 
-  #h2{
-    @include HeaderL2Font;
-    font-size: 3rem;
-    line-height: 2.5rem;
-    @media screen and (max-width: 429px) {
-      font-size: 2.5rem;
-    }
-  }
-  h3, p {
-    font-size: 3rem;
-    font-weight: 50;
-    padding-top: 0;
-    margin: 0;
-    line-height: 1.1;
-    letter-spacing: 1px;
-  }
-  .button-pair button {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    background-color: #FFF;
-    color: black;
-    box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
-    font-size: 2rem;
-    @media screen and (max-width: 429px) {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-  }
-  .button-pair .first-button {
-    margin-right: 1.5rem;
-  }
-  .button-pair button:hover {
-    background-color: black;
-    color: white;
-    transition: background-color 1s ease;
-  }
-}
-.carousel{
-  padding-bottom: 4rem;
-}

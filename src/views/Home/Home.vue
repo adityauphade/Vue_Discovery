@@ -1,13 +1,12 @@
 <template>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">  <div class="home bg-white">
+  <div class="home bg-white">
     <div class="home-header"><Header /></div>
       <video class="home-bg" autoplay muted loop>
         <source src="https://assets.mixkit.co/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-large.mp4" type="video/mp4"/>
       </video>
         <!-- USING TEMPLATE OF HEADER COMPONENT -->
     <div class="home content">
-        <!-- WELCOME -->
-    <!-- welcome section -->
+      <!-- WELCOME -->
       <section id="welcome">
         <div class="top-left">
           <h1 class="welcome-to-our-world">
@@ -34,6 +33,8 @@
           <img :src="require('@/assets/Home/Leisure-left.jpg')" alt="Leisure" />
         </div>
       </section>
+
+      <!-- ExploreOurWorld -->
       <section id="ExploreOurWorld">
           <div class="headerBlock">
             <div class="headerText">
@@ -47,6 +48,8 @@
           </div>
           <div class="carousel"><Carousel/></div>
       </section>
+
+      <!-- LandofDiscovery -->
       <section id="LandofDiscovery">
         <div class="HeaderBlock">
           <div class="Header">
@@ -110,6 +113,33 @@
           </div>
         </div>
       </section>
+      <section id="HomeFooter">
+        <a href="#">
+            <div class="home-footer-content home-footer-image1">
+                <div class="overlay">
+                  <h4>Experiences</h4>
+                  <button>&#8594;</button>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="home-footer-content home-footer-image2">
+                <div class="overlay">
+                  <h4>Lifestyle</h4>
+                  <button>&#8594;</button>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="home-footer-content home-footer-image3">
+                <div class="overlay">
+                  <h4>Wellness</h4>
+                  <button>&#8594;</button>
+                </div>
+            </div>
+        </a>
+      </section>
+    <!-- FOOTER -->
     </div>
     <div class="home-footer"><Footer /></div>
   </div>  
