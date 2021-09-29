@@ -62,9 +62,25 @@
         </div>
         <img id="sideImage" src="https://dxaurk9yhilm4.cloudfront.net/images/158/What_we_do_design_2_2ab4534b0a2984e07d7caeca8808129f.jpg" alt="">
       </div>
+
       <div class="container-6">
         <img src="https://dxaurk9yhilm4.cloudfront.net/images/890/YCGolfClubHouse0916_1288_62018727b9e8103a3d5d6c0701991eca.jpg" alt="">
       </div>
+
+      <div class="container-7">
+        <img id="mainImage" src="https://dxaurk9yhilm4.cloudfront.net/images/153/What_we_do_builders_1_2e8d9b92b1b20afb1d0f8d6550777aa2.jpg" alt="">
+        <div class="description">
+            <h1>Discovery Builders</h1><br>            
+            Every Discovery property is wonderfully in-tune with its <br>
+            natural surroundings - a harmonious blend of the <br>
+            architecturally impressive with the environmentally <br>
+            sensitive. And your every expectation will be met, with <br>
+            our meticulous eye for detail matching outstanding <br>
+            levels of craftsmanship and master building.
+        </div>
+        <img id="sideImage" src="https://dxaurk9yhilm4.cloudfront.net/images/155/What_we_do_builders_2_2ab4534b0a2984e07d7caeca8808129f.jpg" alt="">
+      </div>
+      
     </div>
     <Footer/>
   </div>
