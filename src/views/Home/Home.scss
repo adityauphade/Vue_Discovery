@@ -158,6 +158,24 @@ $icon-size: 1.6rem;
         line-height: 1.5rem;
       }
     }
+    .globe-nav{
+      display: flex;
+      &.router-link-active::after,
+      &.router-link-active:hover::after {
+        width: 100%;
+        height: 2px;
+      }
+      @media screen and (max-width: 429px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      button{
+        border: none;
+        background-color: inherit;
+        outline: none;
+        margin-right: 1.5rem;
+      }
+    }
   }
   .DynamicImages-c3{
     display: flex;
@@ -269,6 +287,7 @@ $icon-size: 1.6rem;
           position: absolute;
           right: 0px;
           top: 9rem;
+          height: 37.5vh;
         }
       }
     }
@@ -414,20 +433,20 @@ $icon-size: 1.6rem;
       }
   }
   button{
-      margin-top: 1.5rem;
-      height: 4rem;
-      width: 4rem;
-      border-radius: 50%;
-      border: 1px solid #ffffff;
-      overflow: hidden;
-      cursor: pointer;
-      background-color: transparent;
-      color: #ffffff;
-      font-size: 1.5rem;
-      @media screen and (max-width: 834px) {
-        height: 3rem;
-        width: 3rem;
-      }
+    margin-top: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1.5rem;
+    @media screen and (max-width: 834px) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 }
 
