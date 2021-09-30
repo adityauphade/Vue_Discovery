@@ -3,7 +3,7 @@
         <img :src="imagePath" alt="">
         <div class="explore-nav">
             <h1>Our Worlds</h1>
-            <button class="btn btn-border-1">Explore</button>
+            <button class="button"><span>Explore</span></button>
         </div>
     </div>
 </template>
