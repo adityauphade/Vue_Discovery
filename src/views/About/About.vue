@@ -80,7 +80,7 @@
         </div>
         <img id="sideImage" src="https://dxaurk9yhilm4.cloudfront.net/images/155/What_we_do_builders_2_2ab4534b0a2984e07d7caeca8808129f.jpg" alt="">
       </div>
-      <ImageFooter/>
+      <ImageFooter v-bind:imagePath="require(`@/assets/About/footerImage.jpg`)"/>
     </div>
     <Footer/>
   </div>

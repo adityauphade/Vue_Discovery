@@ -11,4 +11,6 @@ import ImageFooter from '@/components/ImageFooter/ImageFooter.vue'    //IMPORTIN
     ImageFooter
   },
 })
-export default class About extends Vue {}
+export default class About extends Vue {
+  // public image: string = require(`@/assets/About/footerImage.jpg`),
+}
