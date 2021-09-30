@@ -68,7 +68,6 @@
       </div>
 
       <div class="container-7">
-        <img id="mainImage" src="https://dxaurk9yhilm4.cloudfront.net/images/153/What_we_do_builders_1_2e8d9b92b1b20afb1d0f8d6550777aa2.jpg" alt="">
         <div class="description">
             <h1>Discovery Builders</h1><br>            
             Every Discovery property is wonderfully in-tune with its <br>
@@ -78,6 +77,7 @@
             our meticulous eye for detail matching outstanding <br>
             levels of craftsmanship and master building.
         </div>
+        <img id="mainImage" src="https://dxaurk9yhilm4.cloudfront.net/images/153/What_we_do_builders_1_2e8d9b92b1b20afb1d0f8d6550777aa2.jpg" alt="">
         <img id="sideImage" src="https://dxaurk9yhilm4.cloudfront.net/images/155/What_we_do_builders_2_2ab4534b0a2984e07d7caeca8808129f.jpg" alt="">
       </div>
       <ImageFooter v-bind:imagePath="require(`@/assets/About/footerImage.jpg`)"/>
