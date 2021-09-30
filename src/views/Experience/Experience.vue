@@ -49,7 +49,7 @@
         <div class="background-gradient">
         </div>
         <div class="white-box">
-          <h1>Golf</h1><br>
+          <h1>Outdoor Pursuits</h1><br>
           <p>We commission the world’s most renowned course architects to design spectacular golf experiences on challenging yet incredibly playable 18-hole courses. Our trademark comfort stations also set new standards in on-course amenities.</p><br>
           <button class="button"><span>Explore</span></button>
         </div>
@@ -62,7 +62,7 @@
         <div class="background-gradient">
         </div>
         <div class="white-box">
-          <h1>Welness</h1><br>
+          <h1>Wellness</h1><br>
           <p>We commission the world’s most renowned course architects to design spectacular golf experiences on challenging yet incredibly playable 18-hole courses. Our trademark comfort stations also set new standards in on-course amenities.</p><br>
           <button class="button"><span>Explore</span></button>
         </div>
