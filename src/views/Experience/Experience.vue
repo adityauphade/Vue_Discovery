@@ -27,11 +27,50 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container-2"></div>
-    <div class="container-3"></div>
-    <div class="container-4"></div> -->
+    <div class="Amenities-Explore">
+
+      <div class="container-2">
+        <div class="main-image">
+          <img src="https://dxaurk9yhilm4.cloudfront.net/images/533/Golf3_4d32d1f061062da257f8ac1083a047ac.jpg" alt="">
+        </div>
+        <div class="background-gradient">
+        </div>
+        <div class="white-box">
+          <h1>Golf</h1><br>
+          <p>We commission the world’s most renowned course architects to design spectacular golf experiences on challenging yet incredibly playable 18-hole courses. Our trademark comfort stations also set new standards in on-course amenities.</p><br>
+          <button class="button"><span>Explore</span></button>
+        </div>
+      </div>
+
+      <div class="container-3">
+        <div class="main-image">
+          <img src="https://dxaurk9yhilm4.cloudfront.net/images/144/OD_image_4d32d1f061062da257f8ac1083a047ac.jpg" alt="">
+        </div>
+        <div class="background-gradient">
+        </div>
+        <div class="white-box">
+          <h1>Golf</h1><br>
+          <p>We commission the world’s most renowned course architects to design spectacular golf experiences on challenging yet incredibly playable 18-hole courses. Our trademark comfort stations also set new standards in on-course amenities.</p><br>
+          <button class="button"><span>Explore</span></button>
+        </div>
+      </div>
+
+      <div class="container-4">
+        <div class="main-image">
+          <img src="https://dxaurk9yhilm4.cloudfront.net/images/145/Wellness_image_4d32d1f061062da257f8ac1083a047ac.jpg" alt="">
+        </div>
+        <div class="background-gradient">
+        </div>
+        <div class="white-box">
+          <h1>Welness</h1><br>
+          <p>We commission the world’s most renowned course architects to design spectacular golf experiences on challenging yet incredibly playable 18-hole courses. Our trademark comfort stations also set new standards in on-course amenities.</p><br>
+          <button class="button"><span>Explore</span></button>
+        </div>
+      </div>
+
+    </div>
   </div>
-  
+  <ImageFooter v-bind:imagePath="require(`@/assets/Experiences/footerImage.jpg`)"/>
   <div class="experience-footer"><Footer/></div>
 </div>
 </template>

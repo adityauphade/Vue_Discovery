@@ -27,7 +27,7 @@ export default class App extends Vue {}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Serif+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200;300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
 
 *{

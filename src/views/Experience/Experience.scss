@@ -17,6 +17,49 @@
     flex-direction: column;
     align-items: center;
 }
+@mixin explore-button{
+    .button{
+        position: relative;
+        margin: 1%;
+        padding: 4% 9%;
+        text-align: center;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        background: transparent;
+        color: $subtext-color;
+        border: 1.25px solid $subtext-color;
+        cursor: pointer;
+        transition: ease-out 0.5s;
+    }
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        font-family: Roboto;
+        font-weight: 500;
+      }
+      
+      .button span:after {
+        content: '\00BB';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+}
+$subtext-color: #777;
+$maintext-color: #000;
 $page-width: 100%;
 
 .experience-header{
@@ -100,3 +143,121 @@ $page-width: 100%;
         }
     }
 }
+@mixin Amenities-Layout{
+    position: relative;
+    // margin-top: 8.5rem;
+    min-height: 100vh;
+    padding-left: 2rem;
+    .main-image{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 90vw;
+        img{
+            width: 80%;
+            height: 70%;
+        }
+    }
+    .background-gradient{
+        position: absolute;
+        bottom: -7.5rem;
+        left: 160px;
+        width: 69%;
+        height: 65vh;
+        z-index: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.35;
+    }
+    .white-box{
+        background-color: #FFF;
+        width: 25vw;
+        padding: 7rem 5rem 3.5rem 3.5rem;
+        position: absolute;
+        right: 10%;
+        top: 2.75rem;
+        z-index: 100;
+        p{
+            color: $subtext-color;
+            line-height: 2;
+            font-size: 0.9rem;
+        }
+        h1{
+            color: $maintext-color;
+            @include RoyalFont;
+        }
+        @include explore-button;
+    }
+}
+.Amenities-Explore{
+    background-color: #f3f3f3;
+    padding: 8.5rem 0rem;
+}
+.container-2{
+    @include Amenities-Layout;
+    .background-gradient{
+        background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/533/Golf3_a6d5da221c5021abd741e6da07ad9aaa.jpg');
+    }
+}
+.container-4{
+    @include Amenities-Layout;
+    .background-gradient{
+        background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/145/Wellness_image_a6d5da221c5021abd741e6da07ad9aaa.jpg');
+    }
+}
+.container-3{
+    @include Amenities-Layout;
+    .background-gradient{
+        background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/144/OD_image_a6d5da221c5021abd741e6da07ad9aaa.jpg');
+    }
+}
+.container-2, .container-3, .container-4{
+    margin-bottom: 12.5rem;
+}
+
+.container-3{
+    position: relative;
+    min-height: 100vh;
+    padding-left: 2rem;
+    .main-image{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 90vw;
+        img{
+            width: 80%;
+            height: 70%;
+        }
+    }
+    .background-gradient{
+        position: absolute;
+        bottom: -7.5rem;
+        left: 160px;
+        width: 69%;
+        height: 65vh;
+        z-index: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.35;
+    }
+    .white-box{
+        background-color: #FFF;
+        width: 25vw;
+        padding: 7rem 5rem 3.5rem 3.5rem;
+        position: absolute;
+        right: 10%;
+        top: 2.75rem;
+        z-index: 100;
+        p{
+            color: $subtext-color;
+            line-height: 2;
+            font-size: 0.9rem;
+        }
+        h1{
+            color: $maintext-color;
+            @include RoyalFont;
+        }
+        @include explore-button;
+    }
+}
+
