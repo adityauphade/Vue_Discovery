@@ -1,12 +1,11 @@
 import { Options, Vue } from 'vue-class-component';
 
-// @Options({   --DEFINING PROPERTIES & COMPONENTS
-//   props: {
-//     content passed from the parent is received & used as prop 
-//     msg: String
-//   },
-//   components{
-//       components are used repetedly  
-//   }
-// })
+@Options({
+    props:{
+        Title:{
+            type: Object
+        }
+    }
+})
+
 export default class Header extends Vue {}

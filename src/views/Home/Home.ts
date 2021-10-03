@@ -1,6 +1,6 @@
 import { Options, Vue } from 'vue-class-component';
 // @ is an alias to /src
-import Header from '@/components/Header/Header.vue'    //IMPORTING COMPONENTS
+import Header from '@/components/Header2/Header.vue'    //IMPORTING COMPONENTS
 import Footer from '@/components/Footer/Footer.vue'    //IMPORTING COMPONENTS
 import Carousel from '@/components/Carousel/Carousel.vue'    //IMPORTING COMPONENTS
 
@@ -12,6 +12,13 @@ import Carousel from '@/components/Carousel/Carousel.vue'    //IMPORTING COMPONE
   },
 })
 export default class Home extends Vue {
+  public Title:{
+    text1: string,
+    text2: string
+  } = {
+    text1: "Discover",
+    text2: "your world"
+  }
   protected lands:{
     continent: string,
     globeImage: string,

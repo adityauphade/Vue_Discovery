@@ -1,9 +1,7 @@
 <template>
   <div class="bg-white">
     <div class="about-header">
-      <Header/>
-      <!-- <h1 id='head1'>Creating your</h1>
-      <h1 id='head2'>perfect world</h1> -->
+      <Header v-bind:Title="Title"/>      
     </div>
     <div class="about-body">
       <div class="container-1">
@@ -86,23 +84,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import Header from '@/components/Header/Header.vue'    //IMPORTING COMPONENTS
-import Footer from '@/components/Footer/Footer.vue'
-import Carousel from '@/components/Carousel/Carousel-About.vue'
-import ImageFooter from '@/components/ImageFooter/ImageFooter.vue'
-
-@Options({
-  components: {     //REGISTER COMPONENTS HERE
-    Header,
-    Footer,
-    Carousel,
-    ImageFooter
-  }
-})
-export default class About extends Vue {}
-</script>
+<script type="module" src='./About.ts'></script>
 
 <style lang="sass" scoped>
 @import './About.scss';

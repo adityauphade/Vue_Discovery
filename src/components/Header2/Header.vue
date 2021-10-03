@@ -12,10 +12,6 @@
       <router-link to="/menu"><img src="@/assets/menu-logo.jpg" alt="Menu"></router-link>
     </div>
   </div>
-  <div class="header-text">
-    <h1 id=title1>{{Title.text1}}</h1>
-    <h1 id="title2">{{Title.text2}}</h1>
-  </div>
 </template>
 
 <script type="module" src="./Header.ts"></script>
