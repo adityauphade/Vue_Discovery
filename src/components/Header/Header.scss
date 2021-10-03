@@ -101,6 +101,9 @@ display: none;
     position: absolute;
     bottom: 45%;
     left: 20%;
+    @media screen and (max-width: 834px) {
+        display: none;
+    }
     h1{
         color: #ffffff;
         font-size: 4.75rem;

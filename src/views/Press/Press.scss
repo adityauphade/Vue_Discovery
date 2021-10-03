@@ -41,21 +41,45 @@ $title-color: #000;
 .wrapper-container{
     background-color: #f3f3f3;
     .press-content-1{
-        position: relative;
-        width: 90vw;
+        width: 80vw;
+        padding: 8.5rem 0;
         margin: auto;
-        .whitebox{
-            width: 30vw;
-            padding: 2.5rem 2.5rem 3.5rem 2.5rem;
-            line-height: 2;
-            h1{
-                @include maintext;
+        #container-header{
+            @include maintext;
+            padding-left: 2rem;
+        }
+        .press-slideshow{
+            position: relative;
+            padding: 4rem 0;
+            img{
+                width: 69vw;
+                height: 92.5vh;
             }
-            p{
-                @include paratext;
+            .whitebox{
+                position: absolute;
+                top: 18%;
+                right: 0;
+                width: 25vw;
+                height: 68vh;
+                padding: 4rem;
+                line-height: 1.5;
+                h1{
+                    @include maintext;
+                }
+                p{
+                    @include paratext;
+                    font-size: 0.9rem;
+                }
+                @include button-animation-whitebg
             }
         }
-
     }
-
+    .page-details{
+        align-items: center;
+        justify-content: center;
+        @include button-icons;
+        p{
+            margin: auto 0;
+        }
+    }
 }
