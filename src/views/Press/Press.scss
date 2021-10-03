@@ -44,6 +44,9 @@ $title-color: #000;
         width: 80vw;
         padding: 8.5rem 0;
         margin: auto;
+        @media screen and (max-width: 834px) {
+            width: 100vw;
+        }
         #container-header{
             @include maintext;
             padding-left: 2rem;
@@ -51,9 +54,20 @@ $title-color: #000;
         .press-slideshow{
             position: relative;
             padding: 4rem 0;
+            @media screen and (max-width: 834px) {
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                margin: auto;
+                padding: 0;
+            }
             img{
                 width: 69vw;
                 height: 92.5vh;
+                @media screen and (max-width: 834px) {
+                    width: 100vw;
+                    height: auto;
+                }
             }
             .whitebox{
                 position: absolute;
@@ -63,6 +77,13 @@ $title-color: #000;
                 height: 68vh;
                 padding: 4rem;
                 line-height: 1.5;
+                @media screen and (max-width: 834px) {
+                    position: static;
+                    width: 90vw;
+                    height: auto;
+                    margin: auto;
+                    top: -10rem;
+                }
                 h1{
                     @include maintext;
                 }
@@ -78,6 +99,7 @@ $title-color: #000;
         align-items: center;
         justify-content: center;
         @include button-icons;
+        gap: 1.5rem;
         p{
             margin: auto 0;
         }

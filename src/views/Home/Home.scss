@@ -13,6 +13,7 @@ $icon-size: 1.6rem;
   position: absolute;
   width: $page-width;
   z-index: 100;
+  @include video-header;
 }
 .home-bg{
   width: $page-width;

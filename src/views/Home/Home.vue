@@ -2,6 +2,10 @@
   <div class="home bg-white">
     <div class="home-header">
       <Header/>
+      <div class="video-title">
+        <h1 id="title1">Discover</h1>
+        <h1 id="title2">your world</h1>
+    </div>
     </div>
     <video class="home-bg" autoplay muted loop>
       <source src="https://assets.mixkit.co/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-large.mp4" type="video/mp4"/>
@@ -166,5 +170,6 @@
 <script type="module" src="./Home.ts"></script>
 
 <style scoped lang="scss">
-@import './Home.scss'
+@import '@/global.scss';
+@import './Home.scss';
 </style>

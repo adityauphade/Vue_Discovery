@@ -1,6 +1,12 @@
 <template>
 <div class="home bg-white">
-  <div class="experience-header"><Header/></div>
+  <div class="experience-header">
+    <Header/>
+    <div class="video-title">
+      <h1 id="title1">Unforgettable</h1>
+      <h1 id="title2">Experiences</h1>
+    </div>
+  </div>
   <video class="experience-bg" autoplay muted loop>
     <source src="https://dxaurk9yhilm4.cloudfront.net/experiences_hero.mp4?mtime=20190609072805">
   </video>
@@ -78,7 +84,8 @@
 <script type='Module' src="./Experience.ts"></script>
 
 <style lang="scss" scoped>
-@import './Experience.scss'
+@import '@/global.scss';
+@import './Experience.scss';
 </style>
 
 

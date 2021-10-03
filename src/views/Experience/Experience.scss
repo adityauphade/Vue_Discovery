@@ -63,10 +63,7 @@ $maintext-color: #000;
 $page-width: 100%;
 
 .experience-header{
-    // margin-bottom: 25vh;
-    position: absolute;
-    z-index: 100;
-    width: $page-width;
+    @include video-header
 }
 .experience-bg{
     width: $page-width;

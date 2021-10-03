@@ -1,5 +1,6 @@
 $para-color: #777;
 $title-color: #000;
+$page-width: 100%;
 
 @mixin paratext{
     color: $para-color;
@@ -73,6 +74,34 @@ $title-color: #000;
         outline: none;
         @media screen and (max-width: 429px) {
             width: 1.75rem;
+        }
+    }
+}
+
+@mixin video-header{
+    // margin-bottom: 25vh;
+    position: absolute;
+    
+    z-index: 100;
+    width: $page-width;
+    @media screen and (max-width: 834px) {
+        display: none;
+    }
+    .video-title{
+        position: absolute;
+        color: #FFF;
+        top: 25rem;
+        left: 20%;
+        h1{
+            color: #ffffff;
+            font-size: 4.75rem;
+            line-height: 0.75;
+        }
+        #title1{
+            @include RoyalFont;
+        }
+        #title2{
+            @include HeaderL2Font;
         }
     }
 }
