@@ -1,7 +1,7 @@
 section.press-news {
   h1.heading {
     @include RoyalFont;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: normal;
     padding: 4rem 8rem;
 
@@ -9,7 +9,7 @@ section.press-news {
       padding: 3rem 4rem;
     }
     @media screen and (max-width: 500px) {
-      font-size: 2rem;
+      font-size: 1.6rem;
       padding: 1.8rem;
     }
   }
