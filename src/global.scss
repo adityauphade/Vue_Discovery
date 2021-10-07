@@ -90,12 +90,24 @@ $page-width: 100%;
     top: 25rem;
     left: 20%;
     @media screen and (max-width: 834px) {
-        display: none;
+      top: 30.5rem;
+      left: 5%;
+    }
+    @media screen and (max-width: 429px) {
+      top: 19rem;
+      left: 5%;
     }
     h1 {
       color: #ffffff;
       font-size: 4.75rem;
       line-height: 0.75;
+      @media screen and (max-width: 834px) {
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 429px) {
+        font-size: 2.5rem;
+      }
+
     }
     #title1 {
       @include RoyalFont;

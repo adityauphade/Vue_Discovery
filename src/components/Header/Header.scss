@@ -110,12 +110,18 @@
   @media screen and (max-width: 834px) {
     left: 7%;
   }
+  @media screen and (max-width: 834px) {
+    left: 7%;
+  }
   h1 {
     color: #ffffff;
     font-size: 4.75rem;
     line-height: 0.75;
     @media screen and (max-width: 834px) {
       font-size: 4rem;
+    }
+    @media screen and (max-width: 834px) {
+      font-size: 2.75rem;
     }
   }
   #title1 {
