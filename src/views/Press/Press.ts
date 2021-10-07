@@ -40,14 +40,14 @@ export default class Press extends Vue {
     {
       image:
         "https://dxaurk9yhilm4.cloudfront.net/images/7003/HERO_1920_200615_181847_8cfe90628771654de81065d52a5bfbcf.jpg",
-      title: "James Island <br> Discovery's Newest Property",
+      title: "James Island Discovery's Newest Property",
       body:
         "Discovery Land Company is excited to announce our 24th private luxury residential community. James Island Golf and Ocean Club, a 780-acre private island in British Columbia with only 76 lots, is Discovery Land Company’s most exclusive community to date and Discovery’s first project in Canada.",
     },
     {
       image:
         "https://dxaurk9yhilm4.cloudfront.net/images/523/CostaTerra1-copy_8cfe90628771654de81065d52a5bfbcf.jpg",
-      title: "CostaTerra <br> Discovery's 23rd property",
+      title: "CostaTerra Discovery's 23rd property",
       body:
         "Discovery Land Company, the world’s leading developer of luxury private residential communities, clubs and resorts, has announced its 23rd property and first in Europe.",
     },

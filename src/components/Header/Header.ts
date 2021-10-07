@@ -5,6 +5,11 @@ import { Options, Vue } from 'vue-class-component';
         Title:{
             type: Object
         }
+    },
+    data(){
+        return{
+            menuIsOn: false,
+        }
     }
 })
 
