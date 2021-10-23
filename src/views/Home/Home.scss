@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200&display=swap');
+$page-width: 100%;
+$interBBSpace: 4.5rem;
+$icon-size: 1.6rem;
+@mixin HeaderL1Font {
+  font-family: 'Benne', serif;
+}
+@mixin HeaderL2Font {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.home-header{
+  position: absolute;
+  width: $page-width;
+  z-index: 100;
+  @include video-header;
+}
+.home-bg{
+  width: $page-width;
+  height: 100vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.home-content{
+  width: $page-width;
+}
+.home-footer{
+  width: $page-width;
+}
+
+
+
+#welcome {
+  background: url("../../assets/Home/background-right.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 8rem;
+  @media screen and (max-width: 834px) {
+    padding: 4rem 0;
+  }
+
+  display: grid;
+  column-gap: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr;
+  @media screen and (max-width: 834px) {
+    column-gap: 4rem;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .top-left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    @media screen and (max-width: 834px) {
+      row-gap: 2rem;
+      padding: 2rem;
+    }
+
+    .welcome-to-our-world {
+      span {
+        display: block;
+        font-size: 3rem;
+        line-height: 2.5rem;
+        @media screen and (max-width: 429px) {
+          font-size: 2.5rem;
+          line-height: 2rem;
+        }
+      }
+      .welcome-to {
+        @include HeaderL1Font
+      }
+      .our-world{
+        @include HeaderL2Font
+      }
+    }
+
+    .welcome-text {
+      color: #777;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .right {
+    grid-row: span 2;
+    @media screen and (max-width: 834px) {
+      padding: 0 2rem;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .bottom-left {
+    img {
+      width: 100%;
+      margin-top: 8rem;
+      @media screen and (max-width: 429px) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+#LandofDiscovery{
+  padding-top: 4rem;
+  background-color: #F3F3F3;
+  .HeaderBlock{
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    max-width: 50rem;
+    line-height: 2.5rem;
+    @media screen and (max-width: 834px) {
+      max-width: 100vw;
+      padding: 2rem;
+      row-gap: 2rem;
+    }
+    .Header{
+      display: block;
+      font-size: 3rem;
+      @media screen and (max-width: 834px) {
+        line-height: 2rem;
+      }
+      @media screen and (max-width: 429px){
+        font-size: 2.5rem;
+      }
+      // line-height: 0.35;
+      #h1{
+        @include HeaderL1Font;
+        // line-height: 2.5rem;
+
+      }
+      #h2{
+        @include HeaderL2Font;
+        // line-height: 2.5rem;
+
+      }
+    }
+    .textContent{
+      color: #777;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+    }
+    .globe-nav{
+      display: flex;
+      &.router-link-active::after,
+      &.router-link-active:hover::after {
+        width: 100%;
+        height: 2px;
+      }
+      @media screen and (max-width: 429px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      button{
+        border: none;
+        background-color: inherit;
+        outline: none;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+  .DynamicImages-c3{
+    display: flex;
+    @media screen and (max-width: 834px){
+      flex-direction: column;
+    }
+  }
+  .GoogleEarth{
+    position: relative;
+    display: flex;
+    #backgroundImg{
+      z-index: 2;
+    }
+    @media screen and (max-width: 834px){
+      flex-direction: column;
+    }
+    .blackBox{
+      // width: 40vw;
+      position: absolute;
+      top: 0;
+      display: flex;
+      left: 50%;
+      padding: 2rem;
+      background-color: #161f1e;
+      color: #FFF;
+      z-index: 10;
+      @media screen and (max-width: 834px){
+        position: static;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        padding-right: 0px;
+      }
+      .textContent{
+        padding: 2rem;
+        line-height: 2;
+        padding-right: 4rem;
+        @media screen and (max-width: 429px) {
+          padding: 0px;
+        }
+        p{
+          color: hsla(0,0%,100%,.5);
+          font-weight: 600;
+          font-size: 0.85rem;
+          @media screen and (max-width: 429px) {
+            font-size: 0.7rem;
+          }
+        }
+        .buttons{
+          display: flex;
+          margin-bottom: $interBBSpace;
+          button{
+            width: 3rem;
+            margin-right: 1rem;
+            border: none;
+            background-color: inherit;
+            outline: none;
+            @media screen and (max-width: 429px) {
+              width: 2.75rem;
+            }
+          }
+        }
+        .icons{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 3.5rem;
+          div{
+            margin-right: 4rem;
+            text-align: center;
+            @media screen and (max-width: 429px) {
+              margin-right: 2rem;
+            }
+            svg{
+              width: $icon-size;
+            }
+          }
+        }
+        .locationName{
+          margin-bottom: $interBBSpace;
+          h1{
+            @include HeaderL1Font;
+            margin-top: 2rem;
+          }
+        }
+        .locationPin{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg{
+            width: $icon-size;
+          }
+          p{
+            margin: auto;
+          }
+        }
+      }
+      #overlayImage{
+        position: relative;
+        width: 20vw;
+        top: -100px;
+        z-index: 100;
+        // left: 50%;
+        @media screen and (max-width: 834px) {
+          width: 50vw;
+          top: -150px;
+          height: 50%;
+        }
+        @media screen and (max-width: 429px) {
+          position: absolute;
+          right: 0px;
+          top: 9rem;
+          height: 37.5vh;
+        }
+      }
+    }
+  }
+}
+
+
+
+#ExploreOurWorld{
+  .headerBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 8rem;
+    @media screen and (max-width: 834px) {
+      padding: 4rem 2rem;
+    }
+    @media screen and (max-width: 429px) {
+      flex-direction: column;
+      padding: 2rem 2rem;
+      align-items: baseline;
+      
+    }
+    // display: block;
+    .headerText{
+      @media screen and (max-width: 429px) {
+        margin-bottom: 1rem;
+      }
+    }
+    #h1{
+      @include HeaderL1Font;
+      font-size: 3rem;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+      }
+    }
+    
+    #h2{
+      @include HeaderL2Font;
+      font-size: 3rem;
+      line-height: 2rem;
+      @media screen and (max-width: 429px) {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+      }
+    }
+    h3, p {
+      font-size: 3rem;
+      font-weight: 50;
+      padding-top: 0;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    .button-pair button {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      background-color: #FFF;
+      color: black;
+      box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+      font-size: 2rem;
+      @media screen and (max-width: 429px) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+    .button-pair .first-button {
+      margin-right: 1.5rem;
+    }
+    .button-pair button:hover {
+      background-color: black;
+      color: white;
+      transition: background-color 1s ease;
+    }
+  }
+  .carousel{
+    padding-bottom: 4rem;
+  }
+}
+
+#HomeFooter{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  @media screen and (max-width: 834px) {
+    height: 50vh;
+  }
+  @media screen and (max-width: 429px) {
+    grid-template-columns: 1fr;
+    height: 95vh;
+  }
+  a{
+    text-decoration: none;
+    color: #FFF;
+  }
+  .home-footer-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-color: #000000;
+      background-blend-mode: normal;
+      .overlay{
+        height: 100%;
+        width: 100%;
+        background: rgba($color: #000000, $alpha: 0.35);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+  }
+  .home-footer-image1{
+      background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/728/Expereinces_slider_190716_095517_e36797c82dbcb9dea0800f713424f022.jpg');
+  }
+  .home-footer-image2{
+      background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/729/lifestyle_slider_190716_095537_fc98236fcd7afd38ca0fd181cf61bcb6.jpg');
+  }
+  .home-footer-image3{
+      background-image: url('https://dxaurk9yhilm4.cloudfront.net/images/730/wellness_slider_190716_095551_90f8ce634cc6ad7a15d605007f03ee5c.jpg');
+  }
+  h4{
+      font-size: 44px;
+      line-height: 1.4;
+      @include HeaderL2Font;
+      font-weight: 300;
+      margin: 0;
+      @media screen and (max-width: 834px) {
+        font-size: 32px;
+      }
+  }
+  button{
+    margin-top: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1.5rem;
+    @media screen and (max-width: 834px) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+

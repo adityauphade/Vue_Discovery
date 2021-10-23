@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200;300;600&display=swap");
+
+@mixin RoyalFont {
+  font-family: "Benne", serif;
+}
+@mixin HeaderL2Font {
+  font-family: "Work Sans", sans-serif;
+}
+
+@mixin horizontal-align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin vertical-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding-top: 35px;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: auto;
+  img {
+    cursor: pointer;
+  }
+  .rightHeader,
+  .leftHeader {
+    @include horizontal-align;
+  }
+
+  .rightHeader {
+    a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 60px;
+      padding-bottom: 5px;
+      font-size: 1.1rem;
+      font-weight: 400;
+      display: inline-block;
+      position: relative;
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    img {
+      width: 30px;
+      padding-left: 10px;
+    }
+    .router-link-exact-active {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
+  .leftHeader {
+    img {
+      width: 250px;
+    }
+  }
+  @media screen and (max-width: 834px) and (min-width: 429px) {
+    .leftHeader {
+      img {
+        width: 225px;
+      }
+    }
+    .rightHeader {
+        .nav-pages{
+            display: none;
+        }
+    }
+  }
+  @media screen and (max-width: 428px) {
+    .leftHeader {
+      img {
+        width: 175px;
+      }
+    }
+    .rightHeader {
+        .nav-pages{
+            display: none;
+        }
+    }
+  }
+}
+
+.header-text {
+  position: absolute;
+  bottom: 45%;
+  left: 20%;
+  // z-index: 100;
+  @media screen and (max-width: 834px) {
+    left: 7%;
+  }
+  @media screen and (max-width: 834px) {
+    left: 7%;
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 4.75rem;
+    line-height: 0.75;
+    @media screen and (max-width: 834px) {
+      font-size: 4rem;
+    }
+    @media screen and (max-width: 834px) {
+      font-size: 2.75rem;
+    }
+  }
+  #title1 {
+    @include RoyalFont;
+  }
+  #title2 {
+    @include HeaderL2Font;
+  }
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  box-sizing: border-box;
+  top: -100vh;
+  transition: all 0.1s linear;
+  .router-link-exact-active {
+    border-bottom: 1px solid #ffffff;
+  }
+  .wrapper-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1.75rem;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        @include RoyalFont;
+        font-size: 2.1rem;
+        @media screen and (max-width: 429px) {
+            font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}
+.menu.menuIsOn {
+  top: 0vh;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.rightHeader {
+  a {
+    img {
+      position: relative;
+      z-index: 10000;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+$para-color: #777;
+$title-color: #000;
+$page-width: 100%;
+
+@mixin paratext {
+  color: $para-color;
+  // font-size: 2rem;
+}
+@mixin maintext {
+  @include RoyalFont;
+  color: $title-color;
+  // font-size: 3rem;
+}
+@mixin RoyalFont {
+  font-family: "Benne", serif;
+}
+@mixin HeaderL2Font {
+  font-family: "Work Sans", sans-serif;
+}
+
+@mixin button-animation-whitebg {
+  $button-color: #000;
+  .button {
+    position: relative;
+    margin: 1%;
+    padding: 1% 2%;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background: transparent;
+    color: $button-color;
+    border: 1.25px solid $button-color;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+  }
+
+  .button span:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@mixin button-icons {
+  display: flex;
+  // $interBBSpace: 4.5rem;
+  // margin-bottom: $interBBSpace;
+  button {
+    width: 2rem;
+    // margin-right: 1rem;
+    border: none;
+    background-color: inherit;
+    outline: none;
+    @media screen and (max-width: 429px) {
+      width: 1.75rem;
+    }
+  }
+}
+
+@mixin video-header {
+  // margin-bottom: 25vh;
+  position: absolute;
+
+  z-index: 100;
+  width: $page-width;
+  .video-title {
+    position: absolute;
+    color: #fff;
+    top: 25rem;
+    left: 20%;
+    @media screen and (max-width: 834px) {
+      top: 30.5rem;
+      left: 5%;
+    }
+    @media screen and (max-width: 429px) {
+      top: 19rem;
+      left: 5%;
+    }
+    h1 {
+      color: #ffffff;
+      font-size: 4.75rem;
+      line-height: 0.75;
+      @media screen and (max-width: 834px) {
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 429px) {
+        font-size: 2.5rem;
+      }
+
+    }
+    #title1 {
+      @include RoyalFont;
+    }
+    #title2 {
+      @include HeaderL2Font;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@mixin HeaderL1Font {
+    font-family: 'Benne', serif;
+}
+.image-holder {
+    width: 30vw;
+    height: 70vh;
+    margin: 2px -8px;
+    @media screen and (max-width: 429px) {
+        width: 100vw;
+        height: 50vh;
+        margin: 5px;
+    }
+    @media screen and (min-width: 430px) and (max-width: 834px) {
+        width: 50vw;
+        height: 60vh;
+        margin: 5px;
+    }
+  
+        
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: #000;
+      background-blend-mode: darken;
+    }
+}
+
+.img-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 3rem;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .img-title {
+        margin-bottom: 1rem;
+        white-space: normal;
+        color: #fff;
+        font-size: 2rem;
+        @include HeaderL1Font;
+    }
+    .img-location {
+        line-height: 1.5;
+        white-space: normal;
+        color: #ffffffbf;
+        font-weight: 600;
+        font-size: 0.85rem;
+        @media screen and (max-width: 429px) {
+        font-size: 0.7rem;
+        }
+    }
+}
+  
+//   @mixin white-gradient {
+//     background: linear-gradient(
+//       to right,
+//       rgba(255, 255, 255, 1) 0%,
+//       rgba(255, 255, 255, 0) 100%
+//     );
+//   }
+  
+  $animationSpeed: 25s;
+  
+  // Animation
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  // Styling
+  .slider {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  
+    // &::before,
+    // &::after {
+    // //   @include white-gradient;
+    //   content: "";
+    // }
+  
+    // &::after {
+    //   right: 0;
+    //   top: 0;
+    // //   transform: rotateZ(180deg);
+    // }
+  
+    &::before {
+      left: 0;
+      top: 0;
+    }
+  
+    .slider-track {
+      animation: scroll $animationSpeed linear infinite;
+      width: 60%;
+      margin-right: 2%;
+      cursor: pointer;
+      @media screen and (max-width: 429px) {
+        width: 100vw;
+        height: 50vh;
+        margin: 5px;
+      }
+      @media screen and (min-width: 430px) and (max-width: 834px) {
+        width: 50vw;
+        height: 60vh;
+        margin: 5px;
+      }
+    }
+    .slider-track:hover{
+      .image-holder img{
+          transform: scale(1.1);
+          transition: transform 1s ease;
+      }
+    }
+  
+    .slide {
+      display: flex;
+      flex-direction: row;
+    }
+  }

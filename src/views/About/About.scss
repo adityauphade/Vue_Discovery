@@ -1,0 +1,316 @@
+@mixin RoyalFont {
+    font-family: 'Benne', serif;
+}
+@mixin HeaderL2Font {
+    font-family: 'Work Sans', sans-serif;
+}
+// @mixin HeaderL1Font {
+//     font-family: 'Benne', serif;
+// }
+
+@mixin horizontal-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin vertical-align {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+}
+@mixin image-container{
+    padding: 8.5rem 4rem;
+    // padding-top: 0 !important;
+    @media screen and (max-width: 834px) and (min-width: 430px){
+        padding: 6rem 2rem;
+    }
+    @media screen and (max-width: 429px){
+        padding: 3rem 1rem;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-fit: cover;
+        background-color: #f3f3f3;
+    }
+}
+
+@mixin image-container-fill{
+    // @include image-container;
+    padding: 8.5rem 0rem;
+    // padding-top: 0 !important;
+    @media screen and (max-width: 834px) and (min-width: 430px){
+        padding: 7.5rem 0rem;
+    }
+    @media screen and (max-width: 429px){
+        padding: 3rem 0rem;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-fit: cover;
+        background-color: #f3f3f3;
+    }
+}
+$page-width: 100%;
+
+
+.about-header{
+    background-image: url('../../assets/About/IntroBackground.jpg');
+    background-repeat: no-repeat;
+    // background-size: cover;
+    height: 100vh;
+    h1{
+        font-size: 4.25rem;
+        color: #FFF;
+        // line-height: 0.75;
+        margin-left: 13.5rem;
+        position: absolute;
+        @media screen and (max-width: 834px) {
+            display: none;
+        }
+    }
+    #head1{
+        font-family: 'Benne', serif;
+    }
+    #head2{
+        font-family: 'Work Sans', sans-serif;
+    }
+}
+
+.container-1{
+    padding: 8.5rem 12rem;
+    // padding-bottom: 0px !important;
+    @media screen and (max-width: 834px) {
+        padding: 6rem 3rem;
+    }
+    .headerContent{
+        @include RoyalFont;
+        line-height: 1.4;
+        max-width: 59rem;
+        margin-bottom: 8.5rem !important;
+        margin: auto;
+        text-align: center;
+        font-size: calc(21.33333px + 1.13333vw);
+
+        @media screen and (max-width: 834px){
+            margin-bottom: 6rem !important;
+        }
+        @media screen and (max-width: 429px){
+            font-size: 1.4rem;
+        }
+    }
+    .bodyContent{
+        @include horizontal-align;
+        margin: auto;
+        @media screen and (max-width: 834px) {
+            flex-direction: column-reverse;
+        }
+        .leftBody{
+            color: #777;
+            h1{
+                font-size: calc(21.33333px + 1.13333vw);
+                @include RoyalFont;
+                color: #000;
+                @media screen and (max-width: 429px) {
+                    font-size: 1.9rem;
+                }
+            }
+            @media screen and (max-width: 429px) {
+                font-size: 0.75rem;
+            }
+        }
+        .rightBody{
+            @include horizontal-align;
+            justify-content: end;
+            img{
+                width: 80%;
+                @media screen and (max-width: 429px) {
+                    width: 100% !important;
+                }
+            }
+            @media screen and (max-width: 834px) {
+                justify-content: center !important;
+                margin-bottom: 6rem !important;
+                margin: 0;
+            }
+            @media screen and (max-width: 429px) {
+                // display: none;
+            }
+        }
+    }
+}
+
+.container-2{
+    @include image-container
+}
+
+.container-3{
+    .headerBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4rem 8rem;
+        @media screen and (max-width: 834px) {
+          padding: 4rem 2rem;
+        }
+        @media screen and (max-width: 429px) {
+          flex-direction: column;
+          padding: 2rem 2rem;
+          align-items: baseline;
+          
+        }
+        // display: block;
+        .headerText{
+          @media screen and (max-width: 429px) {
+            margin-bottom: 1rem;
+          }
+        }
+        #h1{
+          @include RoyalFont;
+          font-size: 3rem;
+          line-height: 2rem;
+          @media screen and (max-width: 429px) {
+            font-size: 1.97rem;
+            // padding-bottom: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+        
+        // #h2{
+        //   @include HeaderL2Font;
+        //   font-size: 3rem;
+        //   line-height: 2rem;
+        //   @media screen and (max-width: 429px) {
+        //     font-size: 2.5rem;
+        //     line-height: 1.5rem;
+        //   }
+        // }
+        // h3, p {
+        //   font-size: 3rem;
+        //   font-weight: 50;
+        //   padding-top: 0;
+        //   margin: 0;
+        //   line-height: 1.1;
+        //   letter-spacing: 1px;
+        // }
+        .button-pair button {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          border: 0;
+          outline: 0;
+          cursor: pointer;
+          background-color: #FFF;
+          color: black;
+          box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+          font-size: 2rem;
+          @media screen and (max-width: 429px) {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+        .button-pair .first-button {
+          margin-right: 1.5rem;
+        }
+        .button-pair button:hover {
+          background-color: black;
+          color: white;
+          transition: background-color 1s ease;
+        }
+    }
+    .carousel{
+        padding-bottom: 4rem;
+    }
+}
+
+.container-4, .container-6{
+    @include image-container-fill
+}
+
+@mixin three-imageLayout-container{
+    // height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    padding: 8.5rem 12rem;
+    padding-bottom: 0px !important;
+    column-gap: 3rem;
+    @media screen and (max-width: 834px) {
+        padding: 0rem 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #mainImage{
+        grid-row: span 2;
+        height: 80%;
+        @media screen and (max-width: 834px) {
+            order: 1;
+        }
+    }
+    #sideImage{
+        width: 100%;
+        @media screen and (max-width: 834px) {
+            display: none;
+        }
+    }
+    .description{
+        @include vertical-align;
+        padding: 7rem 0rem;
+        color: #777;
+        @media screen and (max-width: 834px) {
+            padding: 3rem 0rem 8rem 0rem;
+            line-height: 2rem;
+        }
+        @media screen and (max-width: 429px) {
+            line-height: 1.45;
+        }
+        h1{
+            font-size: calc(21.33333px + 1.13333vw);
+            @include RoyalFont;
+            color: #000;
+            @media screen and (max-width: 834px) {
+                font-size: 2.2rem;
+            }
+            @media screen and (max-width: 429px) {
+                font-size: 1.9rem;
+            }
+        }
+        @media screen and (max-width: 429px) {
+            font-size: 0.75rem;
+        }
+        
+    }
+}
+
+.container-5, .container-7{
+    @include three-imageLayout-container;
+}
+
+.container-5{
+    padding-bottom: 8rem !important;
+    @media screen and (max-width: 429px){
+        padding-bottom: 4rem !important; 
+    }
+}
+
+.container-7{
+    padding-bottom: 10rem !important;
+    #mainImage{
+        margin-left: auto;
+        @media screen and (max-width: 834px){
+            margin-left: 0;
+        }
+    }
+    @media screen and (max-width: 429px){
+        padding-bottom: 6rem !important; 
+    }
+}

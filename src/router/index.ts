@@ -4,32 +4,32 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/Home/Home.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import('../views/About/About.vue')
   },
   {
     path: '/world',
     name: 'World',
-    component: () => import('../views/World.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/World/World.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/experience',
     name: 'Experience',
-    component: () => import('../views/Experience.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/Experience/Experience.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/gallery',
     name: 'Gallery',
-    component: () => import('../views/Gallery.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/Gallery/Gallery.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/press',
     name: 'Press',
-    component: () => import('../views/Press.vue')   //  THIS WAS IMPORTED ABOVE
+    component: () => import('../views/Press/Press.vue')   //  THIS WAS IMPORTED ABOVE
   },
   {
     path: '/menu',

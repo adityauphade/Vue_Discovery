@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-// import { Options, Vue } from 'vue-class-component';
+import { Options, Vue } from 'vue-class-component';
 // // @ is an alias to /src
 // import Home from '@/views/Home.vue'    //IMPORTING COMPONENTS
 
@@ -20,19 +20,25 @@
 //     Home
 //   },
 // })
-// export default class App extends Vue {}
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Serif+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Work+Sans:wght@100;200;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
+
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
+  // font-family: 'Roboto', sans-serif;
   // background: #000;
   // width: 100vw;
   // height: 100vh;
 }
 body{
-  background:#000;
+  background: #000 !important;
 }
 </style>
